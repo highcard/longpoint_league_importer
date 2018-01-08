@@ -14,7 +14,7 @@ filename import successful
 1 event file(s) imported
 Output written to file export.csv
 ```
-##Additional flags:
+## Additional flags:
 
 `-e` flag triggers prompts to request user input for overriding input filenames in export headers
 ```
