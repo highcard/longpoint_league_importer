@@ -12,21 +12,20 @@ For a simple import and export, from the command line run:
 $ python league_rating.py -f filename [additional_filenames] -w
 filename import successful
 1 event file(s) imported
-Output written to file default.csv
+Output written to file export.csv
 ```
-Additional flags:
+##Additional flags:
 
-`-e` Requests user input for overriding input filenames in export headers
+`-e` flag triggers prompts to request user input for overriding input filenames in export headers
 ```
 $ python league_rating.py -f filename [additional_filename] -we
 Enter event name for filename: foobar
 filename import successful
 1 event file(s) imported
-Enter max # of events for use in scoring: 2
-Output written to default.csv
+Output written to export.csv
 ```
 
-`-o` Input to override default export name
+`-o` flag specifies string to override default export name (export.csv)
 ```
 $ python league_rating.py -f filename [additional_filenames] -wo export_filename
 filename import successful
@@ -34,8 +33,11 @@ filename import successful
 Output written to file export_filename
 ```
 
+`-m` flag specifies maximum number of events to use in calculating a fighter's league points. (0 denotes use all inputs.) default: 0.
+
+
 ## Example Usage
 
 ```
-$ python league_rating.py -f tests/test_1.csv tests/test_2.csv tests/test_3.csv -weo test_export.csv
+$ python league_rating.py -f sample/test_1.csv sample/test_2.csv sample/test_3.csv -weo sample_export.csv -m 2
 ```
